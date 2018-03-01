@@ -6,13 +6,41 @@
     android:layout_height="match_parent"
     tools:context="com.shuja1497.githubprofilesearcher.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText_ueserName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="UserName"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button_search"
+        style="@android:style/Widget.Material.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="@+id/editText_ueserName"
+        app:layout_constraintStart_toStartOf="@+id/editText_ueserName"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ueserName" />
+
+    <TextView
+        android:id="@+id/textView_repos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Repositeries"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/button_search"
+        app:layout_constraintStart_toStartOf="@+id/button_search"
+        app:layout_constraintTop_toBottomOf="@+id/button_search" />
 </android.support.constraint.ConstraintLayout>

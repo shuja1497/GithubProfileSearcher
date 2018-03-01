@@ -2,14 +2,20 @@ package com.shuja1497.githubprofilesearcher;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
 public class MainActivity extends AppCompatActivity {
 
     private RequestQueue mQueue;
     private StringRequest mStringRequest;
+    private String mBASE_URL;
+    private String mURL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,9 +23,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get a RequestQueue
-        mQueue = MySingleton.getInstance(this.getApplicationContext()).
-                getRequestQueue();
+//        mQueue = MySingleton.getInstance(this.getApplicationContext()).getRequestQueue();
+        mBASE_URL = "";
+        mURL = "";
 
+        mStringRequest = new StringRequest(Request.Method.GET, mURL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
 
         // Add a request
         MySingleton.getInstance(this).addToRequestQueue(mStringRequest);
