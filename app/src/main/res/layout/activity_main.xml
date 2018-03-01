@@ -31,7 +31,8 @@
         android:text="Search"
         app:layout_constraintEnd_toEndOf="@+id/editText_ueserName"
         app:layout_constraintStart_toStartOf="@+id/editText_ueserName"
-        app:layout_constraintTop_toBottomOf="@+id/editText_ueserName" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_ueserName"
+        android:onClick="search"/>
 
     <TextView
         android:id="@+id/textView_repos"
@@ -42,5 +43,7 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/button_search"
         app:layout_constraintStart_toStartOf="@+id/button_search"
-        app:layout_constraintTop_toBottomOf="@+id/button_search" />
+        app:layout_constraintTop_toBottomOf="@+id/button_search"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        />
 </android.support.constraint.ConstraintLayout>
